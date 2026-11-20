@@ -1,16 +1,7 @@
-import sys
+text = "madam"
+clean = text.lower().replace(" ", "")
 
-n = int(sys.stdin.readline().strip())
-
-temp = n
-rev = 0
-
-while temp > 0:
-    digit = temp % 10
-    rev = rev * 10 + digit
-    temp = temp // 10
-
-if n == rev:
-    print("Palindrome")
+if clean == clean[::-1]:
+    print(text, "is a Palindrome")
 else:
-    print("Not Palindrome")
+    print(text, "is Not a Palindrome")
